@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {   Linkedin, Twitter, Github, Zap, Mail, Phone, ArrowRight, Brain,  Target, Shield, Heart, Calendar, Shirt, Puzzle } from 'lucide-react';
+import {   Linkedin, Twitter, Github, Zap, Mail, Phone, ArrowRight, Brain,  Target, Hotel, Drama,  Shirt, 
+  Puzzle } from 'lucide-react';
+  
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,39 +32,44 @@ function App() {
 
   const projects = [
     {
-      name: 'VeriQPro',
+      name: 'Vertus Hotel',
       description: 'A smart product authentication system leveraging QR technology to fight counterfeiting across the FMCG sector. We\'re making trust traceable.',
       category: 'Authentication & Trust',
-      icon: Shield,
-      color: 'from-emerald-500 to-teal-600'
+      icon: Hotel,
+      color: 'from-emerald-500 to-teal-600',
+      link: "https://vertushotel.com"
     },
     {
       name: 'MenCounty',
       description: 'An anonymous emotional wellness community for married men. Built with behavioral nudges, it empowers men to vent, heal, and connect—without pressure.',
       category: 'Wellness & Community',
-      icon: Heart,
-      color: 'from-rose-500 to-pink-600'
+      icon: Brain,
+      color: 'from-rose-500 to-pink-600',
+      link: 'https://mencounty.com'
     },
     {
       name: 'Nextvibe',
       description: 'Event tech reimagined. Nextvibe helps organizers engage attendees through real-time gamified experiences, turning events into dynamic content engines.',
       category: 'Event Technology',
-      icon: Calendar,
-      color: 'from-purple-500 to-indigo-600'
+      icon: Drama,
+      color: 'from-purple-500 to-indigo-600',
+      link: 'https://nextvibe.co'
     },
     {
       name: 'Rewatan',
       description: 'Fashion meets behavioral patterns. Rewatan is a clothing line with a smart fit model and brand culture designed for the upwardly mobile African man.',
       category: 'Fashion & Lifestyle',
       icon: Shirt,
-      color: 'from-amber-500 to-orange-600'
+      color: 'from-amber-500 to-orange-600',
+      link: 'https://rewatan.co'
     },
     {
       name: 'TheBuzzle',
       description: 'Gamification meets recycling. We\'ve built national-scale gamified puzzle systems that drive repeat purchases, eco-responsibility, and brand engagement using behavioral triggers.',
       category: 'Gamification & Sustainability',
       icon: Puzzle,
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-500 to-emerald-600',
+      link: 'https://thebuzzle.co'
     }
   ];
 
@@ -306,10 +313,12 @@ function App() {
                     </p>
                     
                     {/* Learn More */}
+                      <a href={project.link}>
                     <div className="flex items-center text-burgundy-600 font-semibold group-hover:text-burgundy-700 transition-colors duration-300">
                       <span>Explore Project</span>
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
                     </div>
+                      </a>
                   </div>
                   
                   {/* Hover Effect Border */}
