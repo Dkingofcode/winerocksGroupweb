@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Mail, Phone, Linkedin, Twitter, Github, ArrowRight, Users, Brain, Zap, Target, Shield, Heart, Calendar, Shirt, Puzzle } from 'lucide-react';
+import {   Linkedin, Twitter, Github, Zap, Mail, Phone, ArrowRight, Brain,  Target, Shield, Heart, Calendar, Shirt, Puzzle } from 'lucide-react';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [activeProject, setActiveProject] = useState(0);
 
+  console.log(activeProject);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
