@@ -71,10 +71,14 @@ function App() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/90 backdrop-blur-xl shadow-lg border-b border-gray-100' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
-            <div className="text-2xl font-black tracking-tight">
-              <span className="text-burgundy-800">Winerocks</span>
-              <span className="text-gray-900 font-light">Group</span>
-            </div>
+           <div className="flex items-center gap-2 text-2xl font-black tracking-tight">
+  <img src="/winerockslogo.jpeg" alt="Winerocks Logo" className="h-10 w-10 object-contain" />
+  <div>
+    <span className="text-burgundy-800">Winerocks</span>{' '}
+    <span className="text-gray-900 font-light">Group</span>
+  </div>
+</div>
+
             <div className="hidden md:flex space-x-12">
               <a href="#about" className="text-gray-700 hover:text-burgundy-800 transition-all duration-300 font-medium tracking-wide hover:scale-105">About</a>
               <a href="#portfolio" className="text-gray-700 hover:text-burgundy-800 transition-all duration-300 font-medium tracking-wide hover:scale-105">Portfolio</a>
