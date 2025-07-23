@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {   Linkedin, Twitter, Github, Zap, Mail, Phone, ArrowRight, Brain,  Target, Hotel, Drama,  Shirt, 
-  Puzzle } from 'lucide-react';
+import { Linkedin, Twitter, Github, Zap, Mail, Phone, ArrowRight, Brain,  Target, Hotel, Drama, Hospital } from 'lucide-react';
   
 
 function App() {
@@ -33,8 +32,8 @@ function App() {
   const projects = [
     {
       name: 'Vertus Hotel',
-      description: 'A smart product authentication system leveraging QR technology to fight counterfeiting across the FMCG sector. We\'re making trust traceable.',
-      category: 'Authentication & Trust',
+      description: 'A luxury hotel management system that enhances guest experiences through behavioral insights and seamless operations.',
+      category: 'Beauty & Hospitality',
       icon: Hotel,
       color: 'from-emerald-500 to-teal-600',
       link: "https://vertushotel.com"
@@ -56,21 +55,13 @@ function App() {
       link: 'https://nextvibe.co'
     },
     {
-      name: 'Rewatan',
-      description: 'Fashion meets behavioral patterns. Rewatan is a clothing line with a smart fit model and brand culture designed for the upwardly mobile African man.',
-      category: 'Fashion & Lifestyle',
-      icon: Shirt,
+      name: 'Prisms Healthcare',
+      description: 'Prisms Healthcare is a comprehensive healthcare platform that connects patients with doctors, streamlining appointments, consultations, and medical records.',
+      category: 'Health & Medicine',
+      icon: Hospital,
       color: 'from-amber-500 to-orange-600',
-      link: 'https://rewatan.co'
+      link: 'https://prismshealthcare.com'
     },
-    {
-      name: 'TheBuzzle',
-      description: 'Gamification meets recycling. We\'ve built national-scale gamified puzzle systems that drive repeat purchases, eco-responsibility, and brand engagement using behavioral triggers.',
-      category: 'Gamification & Sustainability',
-      icon: Puzzle,
-      color: 'from-green-500 to-emerald-600',
-      link: 'https://thebuzzle.co'
-    }
   ];
 
   return (
@@ -82,15 +73,15 @@ function App() {
            <div className="flex items-center gap-2 text-2xl font-black tracking-tight">
   <img src="/winerockslogo.jpeg" alt="Winerocks Logo" className="h-10 w-10 object-contain" />
   <div>
-    <span className="text-burgundy-800">Winerocks</span>{' '}
-    <span className="text-gray-900 font-light">Group</span>
+    <span className={`${isScrolled ? "text-rose-900" : "text-gray-100" }`}>Winerocks</span>{' '}
+    <span className={`${isScrolled ? "text-gray-500" : "text-gray-100 font-light"}`}>Group</span>
   </div>
 </div>
 
             <div className="hidden md:flex space-x-12">
-              <a href="#about" className="text-gray-700 hover:text-burgundy-800 transition-all duration-300 font-medium tracking-wide hover:scale-105">About</a>
-              <a href="#portfolio" className="text-gray-700 hover:text-burgundy-800 transition-all duration-300 font-medium tracking-wide hover:scale-105">Portfolio</a>
-              <a href="#contact" className="text-gray-700 hover:text-burgundy-800 transition-all duration-300 font-medium tracking-wide hover:scale-105">Contact</a>
+              <a href="#about" className="text-gray-500 hover:text-burgundy-800 transition-all duration-300 font-medium tracking-wide hover:scale-105">About</a>
+              <a href="#portfolio" className="text-gray-500 hover:text-burgundy-800 transition-all duration-300 font-medium tracking-wide hover:scale-105">Portfolio</a>
+              <a href="#contact" className="text-gray-500 hover:text-burgundy-800 transition-all duration-300 font-medium tracking-wide hover:scale-105">Contact</a>
             </div>
           </div>
         </div>
@@ -107,10 +98,6 @@ function App() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="space-y-8 animate-fade-in">
-            <div className="inline-block px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium tracking-wide mb-8">
-              Behavioral Economics × Innovation
-            </div>
-            
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none tracking-tight mb-8">
               Where Human
               <br />
